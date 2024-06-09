@@ -1,0 +1,130 @@
+{
+  "menu": [
+    {
+      "id": "1",
+      "name": "Barbeque Burger",
+      "description": "",
+      "price": 85,
+      "category": "hamburgers",
+      "image": "/barbeque_burger.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Cheese & Bacon Burger",
+      "description": "",
+      "price": 90,
+      "category": "hamburgers",
+      "image": "cheeze_bacon_burger.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Chilli Burger",
+      "description": "",
+      "price": 95,
+      "category": "hamburgers",
+      "image": "/Chilli_burger.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Fried Onion Burger",
+      "description": "",
+      "price": 90,
+      "category": "hamburgers",
+      "image": "/fried_onion_burger.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Bun Drop Original",
+      "description": "",
+      "price": 80,
+      "category": "hamburgers",
+      "image": "/regular_burger.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Cola",
+      "description": "",
+      "price": 25,
+      "category": "drinks",
+      "image": "/Cola_img.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Blueberry",
+      "description": "",
+      "price": 35,
+      "category": "drinks",
+      "image": "/Blueberry_img.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Lemonade",
+      "description": "",
+      "price": 20,
+      "category": "drinks",
+      "image": "/Lemonade_img.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Exotic",
+      "description": "",
+      "price": 35,
+      "category": "drinks",
+      "image": "/Exotic_img.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Chocolate milkshake",
+      "description": "",
+      "price": 50,
+      "category": "drinks",
+      "image": "/chocoMilkshake_img.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Oreo milkshake",
+      "description": "",
+      "price": 50,
+      "category": "drinks",
+      "image": "/OreoMilkshake_img.jpg"
+    }
+  ],
+  "categories": [
+    {
+      "name": "hamburgers",
+      "img": "/hamburger_category.jpg",
+      "id": "562b"
+    },
+    {
+      "name": "snacks",
+      "img": "/snack_category.jpg",
+      "id": "2689"
+    },
+    {
+      "name": "drinks",
+      "img": "/drink_category.jpg",
+      "id": "95c9"
+    },
+    {
+      "name": "dessert",
+      "img": "/dessert_category.jpg",
+      "id": "3784"
+    },
+    {
+      "name": "sauce",
+      "img": "/sauce_category.jpg",
+      "id": "b1ac"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "user",
+      "password": "password",
+      "favorites": []
+    }
+  ],
+  "orders": [
+
+  ]
+}

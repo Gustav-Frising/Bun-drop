@@ -1,0 +1,42 @@
+.category-menu {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+.category-list {
+  display: flex;
+  margin: 20px 0px;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  overflow-x: scroll;
+}
+.category-list-item {
+  border-radius: 50px;
+
+  background-color: #4e4e4d;
+  padding-bottom: 30px;
+  width: 100px;
+  height: 100%;
+}
+.category-list :hover {
+  background-color: #ffa07a;
+  transition: 0.4;
+}
+.category-text {
+  margin-top: 20px;
+  background-color: transparent;
+  width: 80%;
+  margin: 20px auto;
+}
+.category-list img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.active {
+  background-color: #ffa07a;
+}
