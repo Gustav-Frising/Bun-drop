@@ -1,7 +1,10 @@
-import React, { } from "react";
+import React from "react";
+import useLocalStorage from "../../hooks/useLocalStorage";
 import "./MenuCard.css";
 
-function MenuCard(category, menu) {
+function MenuCard(category, menu, menuRefs) {
+  const { addCartItem, removeCartItem, cartItems } = useLocalStorage();
+
   const filteredMenu =
     category === "all"
       ? menu
@@ -12,7 +15,11 @@ function MenuCard(category, menu) {
       <div className="menu-list">
         {/* loop over filtered menu and display matching categories*/}
         {filteredMenu.map((m) => (
-          <div key={m.id} className="menu-list-item">
+          <div
+            key={m.id}
+            className="menu-list-item"
+            ref={(el) => (menuRefs.current[m.id] = el)}
+          >
             <img className="menu-img" src={`${m.image}`} alt="img" />
             <h2 className="menu-Name">{m.name}</h2>
             <p className="menu-description">
@@ -22,16 +29,26 @@ function MenuCard(category, menu) {
             <h1 className="menu-price">{m.price} Kr </h1>
             <div className="menu-button-container">
               {!cartItems[m.id] ? (
-                <button className="menu-button">
+                <button
+                  className="menu-button"
+                  onClick={() => addCartItem(m.id)}
+                >
                   <img src="/cart_icon.png" alt="cart" />
                   Add to Cart
                 </button>
               ) : (
                 <div className="count-container">
-                  <img src="/minus_image.png" />
+                  <img
+                    onClick={() => removeCartItem(m.id)}
+                    src="/minus_image.png"
+                  />
                   <p>{cartItems[m.id]}</p>
 
-                  <img src="/plus_image.png" alt="" />
+                  <img
+                    onClick={() => addCartItem(m.id)}
+                    src="/plus_image.png"
+                    alt=""
+                  />
                 </div>
               )}
             </div>
