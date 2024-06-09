@@ -6,11 +6,36 @@ function useLocalStorage() {
     const savedCartItems = localStorage.getItem("cartItems");
     return savedCartItems ? JSON.parse(savedCartItems) : {};
   });
+  const [userInfo, setUserInfo] = useState(() => {
+    const savedUserInfo = localStorage.getItem("user");
+    return savedUserInfo ? JSON.parse(savedUserInfo) : null;
+  });
+  useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(userInfo));
+  }, [userInfo]);
 
   //every time cart item changes store updated values
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
+
+  function logInUser(username, password, users) {
+    const user = users.find(
+      (u) => u.name === username && u.password === password
+    );
+
+    if (user) {
+      const userData = { id: user.id, name: user.name };
+      localStorage.setItem("user", JSON.stringify(userData));
+      setUserInfo(userData);
+      return true;
+    } else {
+      return false;
+    }
+  }
+  function logoutUser() {
+    localStorage.clear();
+  }
 
   function addCartItem(itemId) {
     //If the item does not exist in the cart set it to 1
@@ -55,6 +80,8 @@ function useLocalStorage() {
   }
 
   return {
+    logoutUser,
+    logInUser,
     calculateTotal,
     setCartItem,
     addCartItem,
@@ -62,6 +89,7 @@ function useLocalStorage() {
     getCartItems,
     cartItems,
     deleteCartItems,
+    userInfo,
   };
 }
 
