@@ -1,0 +1,74 @@
+.menu {
+  width: 80%;
+  margin: auto;
+}
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: 20px 0px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.menu-list-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #4e4e4d;
+  padding-bottom: 30px;
+  width: 300px;
+  height: 100%;
+  border-top-left-radius: 300px;
+  border-top-right-radius: 300px;
+  overflow: hidden;
+}
+.menu-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.menu-Name,
+.menu-description,
+.menu-price {
+  color: white;
+  margin: 30px 0;
+}
+
+.menu-button {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  font-size: 18px;
+  border: 2px solid #ffa07a;
+  padding: 12px 24px;
+  border-radius: 50px;
+}
+.menu-button:hover {
+  background: #ffa07a;
+  transition: 0.4;
+}
+.menu-description {
+  width: 80%;
+  margin: auto;
+}
+.count-container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  font-size: 18px;
+  border: 2px solid #ffa07a;
+  padding: 12px 24px;
+  border-radius: 50px;
+}
+.favorite {
+  margin-left: 20px;
+}

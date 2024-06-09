@@ -1,0 +1,64 @@
+.login-modal {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-modal-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  width: max(20vw, 330px);
+  height: max(50vh, 400px);
+  background-image: url("/Login_background.jpg");
+  background-size: cover;
+  gap: 20px;
+  padding: 30px 40px;
+  border-radius: 10px;
+}
+.login-modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffa07a;
+}
+.login-modal-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login-modal-inputs input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ffa07a;
+  border-radius: 4px;
+  color: #ffa07a;
+  font-weight: bold;
+  background-color: transparent;
+}
+.login-modal button {
+  background: #ffa07a;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  color: white;
+  border: none;
+}
+.login-modal button:hover {
+  color: black;
+}
+.login-modal span {
+  margin-top: 20px;
+  text-align: center;
+  color: #ffa07a;
+}
+
+

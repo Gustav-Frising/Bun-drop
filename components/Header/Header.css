@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  height: 50vh;
+  width: 100vw;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.5) 80%,
+      #070704 100%
+    ),
+    url("/header_img.jpg") no-repeat center;
+  background-size: cover;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1050px) {
+  .header {
+    height: 35vh;
+  }
+  .header-content {
+    max-width: 50%;
+    margin-top: 100px;
+  }
+}
+@media (max-width: 750px) {
+  .header {
+    height: 35vh;
+  }
+  .header-content {
+    max-width: 70%;
+    margin-top: 150px;
+  }
+}

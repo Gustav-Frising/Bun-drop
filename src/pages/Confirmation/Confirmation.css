@@ -1,0 +1,24 @@
+.confirmation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.confirmation-card {
+  border: 2px solid #ffa07a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  gap: 20px;
+  text-align: center;
+}
+
+.confirmation-card h1 {
+  margin-bottom: 20px;
+}
+.confirmation-card p,
+.confirmation-card ul {
+  list-style: none;
+  margin-bottom: 10px;
+}
