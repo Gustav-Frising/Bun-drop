@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const {
+    getCartItems,
     addCartItem,
     removeCartItem,
     cartItems,

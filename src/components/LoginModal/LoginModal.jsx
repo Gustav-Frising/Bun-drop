@@ -50,7 +50,7 @@ function LoginModal({ setShowLoginModal, setIsLoggedIn }) {
       alert("Login successful!");
       setShowLoginModal(false);
       setIsLoggedIn(true);
-      window.location.reload();
+       window.location.reload();
     } else {
       alert("Invalid username or password");
     }

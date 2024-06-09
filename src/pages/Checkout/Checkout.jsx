@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import "./Checkout.css";
+import PaymentModal from "../../components/PaymenModal/PaymentModal";
 function Ceckout() {
   const { calculateTotal, getCartItems, userInfo } = useLocalStorage();
   const [menu, setMenu] = useState([]);
@@ -159,7 +160,12 @@ function Ceckout() {
           </button>
         </div>
       </form>
-    
+      {showPaymentModal && (
+        <PaymentModal
+          setShowPaymentModal={setShowPaymentModal}
+          handleCheckoutSubmit={handleCheckoutSubmit}
+        />
+      )}
     </div>
   );
 }

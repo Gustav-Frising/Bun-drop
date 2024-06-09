@@ -22,7 +22,7 @@ function Footer() {
               <Link to={"/"}>
                 <li className="home">Home</li>
               </Link>
-
+              
               <li>Menu</li>
             </ul>
           </div>

@@ -14,7 +14,7 @@ function Confirmation() {
           setOrder(latestOrder);
         }
       });
-  }, [order]);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,6 +23,7 @@ function Confirmation() {
 
     return () => clearTimeout(timer);
   }, [countdown]);
+
 
   function getRandomTime() {
     // Generate a random time between 15 to 35 minutes

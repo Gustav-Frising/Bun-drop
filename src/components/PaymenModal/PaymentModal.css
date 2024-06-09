@@ -1,14 +1,14 @@
 .payment-modal {
-  position: fixed; 
+  position: fixed; /* Change to fixed to stay in place on scroll */
   z-index: 1;
-  top: 0; 
-  left: 0; 
+  top: 0; /* Ensure it starts from the top */
+  left: 0; /* Ensure it starts from the left */
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+  display: flex; /* Use flex for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .payment-modal-container {
@@ -17,7 +17,7 @@
   flex-direction: column;
   width: max(20vw, 330px);
   height: max(50vh, 400px);
-  background-color: #222; 
+  background-color: #222; /* Black background color */
   gap: 20px;
   padding: 30px 40px;
   border-radius: 10px;
@@ -70,7 +70,7 @@
 }
 
 .payment-modal-inputs .input-group .cvv-input {
-  flex: 0.3; 
+  flex: 0.3; /* 30% of the row */
 }
 
 .payment-modal button {

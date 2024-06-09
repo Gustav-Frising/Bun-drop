@@ -1,0 +1,65 @@
+.favorites-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto; /* Center horizontally */
+}
+
+.favorites-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.favorites-list-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+}
+
+.favorites-img {
+  width: 100%;
+  height: auto;
+}
+
+.favorites-name {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.favorites-description {
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+.favorites-price {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.favorites-container button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #ffa07a;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.favorites-container button:hover {
+  background-color: #ffa07a;
+  color: black;
+}
+
+.count-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}

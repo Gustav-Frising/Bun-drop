@@ -1,10 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import "./MenuCard.css";
+function MenuCard({ category, menu, menuRefs }) {
+  const { addCartItem, removeCartItem, cartItems, userInfo } =
+    useLocalStorage();
 
-function MenuCard(category, menu, menuRefs) {
-  const { addCartItem, removeCartItem, cartItems } = useLocalStorage();
+  const [user, setUser] = useState(null);
+  const [favorites, setFavorites] = useState([]);
 
+  useEffect(() => {
+    if (userInfo) {
+      fetch(`http://localhost:3000/users/${userInfo.id}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setUser(data);
+          setFavorites(data.favorites || []);
+        });
+    }
+  }, [userInfo]);
+
+  async function removeFromFavorites(id) {
+    const newFavorites = favorites.filter((fav) => fav.id !== id);
+    setFavorites(newFavorites);
+    updateUserFavorites(newFavorites);
+  }
+  const addToFavorites = (item) => {
+    if (!favorites.find((fav) => fav.id === item.id)) {
+      const newFavorites = [...favorites, item];
+      setFavorites(newFavorites);
+      updateUserFavorites(newFavorites);
+    }
+  };
+  function updateUserFavorites(favoritesList) {
+    const updatedUser = { ...user, favorites: favoritesList };
+
+    const putOptions = {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedUser),
+    };
+
+    fetch(`http://localhost:3000/users/${user.id}`, putOptions);
+  }
+  const handleFavoriteClick = (item) => {
+    if (favorites.find((fav) => fav.id === item.id)) {
+      removeFromFavorites(item.id);
+    } else {
+      addToFavorites(item);
+    }
+  };
+
+  //filter menu based on category else show all
   const filteredMenu =
     category === "all"
       ? menu
@@ -26,7 +74,24 @@ function MenuCard(category, menu, menuRefs) {
               {m.description} Lorem ipsum dolor sit amet consectetur adipisicing
               elit. Ex, blanditiis.
             </p>
-            <h1 className="menu-price">{m.price} Kr </h1>
+            <h1 className="menu-price">
+              {m.price} Kr{" "}
+              {favorites.find((fav) => fav.id === m.id) ? (
+                <img
+                  className="favorite"
+                  src="FavoriteFill_img.png"
+                  alt="Remove from favorites"
+                  onClick={() => handleFavoriteClick(m)}
+                />
+              ) : (
+                <img
+                  className="favorite"
+                  src="Favorite_img.png"
+                  alt="Add to favorites"
+                  onClick={() => handleFavoriteClick(m)}
+                />
+              )}
+            </h1>
             <div className="menu-button-container">
               {!cartItems[m.id] ? (
                 <button
