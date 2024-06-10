@@ -8,6 +8,7 @@ function MenuCard({ category, menu, menuRefs }) {
   const [user, setUser] = useState(null);
   const [favorites, setFavorites] = useState([]);
 
+  //fetch user data and their favorites
   useEffect(() => {
     if (userInfo) {
       fetch(`http://localhost:3000/users/${userInfo.id}`)
@@ -19,11 +20,13 @@ function MenuCard({ category, menu, menuRefs }) {
     }
   }, [userInfo]);
 
+  // // Function to remove an item from favorites
   async function removeFromFavorites(id) {
     const newFavorites = favorites.filter((fav) => fav.id !== id);
     setFavorites(newFavorites);
     updateUserFavorites(newFavorites);
   }
+  // Function to add an item to favorites
   const addToFavorites = (item) => {
     if (!favorites.find((fav) => fav.id === item.id)) {
       const newFavorites = [...favorites, item];
@@ -31,6 +34,7 @@ function MenuCard({ category, menu, menuRefs }) {
       updateUserFavorites(newFavorites);
     }
   };
+  // Function to update the user's favorites in the backend
   function updateUserFavorites(favoritesList) {
     const updatedUser = { ...user, favorites: favoritesList };
 
@@ -46,9 +50,9 @@ function MenuCard({ category, menu, menuRefs }) {
   }
   const handleFavoriteClick = (item) => {
     if (favorites.find((fav) => fav.id === item.id)) {
-      removeFromFavorites(item.id);
+      removeFromFavorites(item.id); // If item is already a favorite, remove it
     } else {
-      addToFavorites(item);
+      addToFavorites(item); // If item is not a favorite, add it
     }
   };
 
@@ -66,7 +70,7 @@ function MenuCard({ category, menu, menuRefs }) {
           <div
             key={m.id}
             className="menu-list-item"
-            ref={(el) => (menuRefs.current[m.id] = el)}
+            ref={(el) => (menuRefs.current[m.id] = el)} // Set reference for scrolling to this item
           >
             <img className="menu-img" src={`${m.image}`} alt="img" />
             <h2 className="menu-Name">{m.name}</h2>

@@ -11,9 +11,11 @@ function Footer() {
         <div className="footer-content-center">
           <div>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel,
-              esse ratione et necessitatibus excepturi reiciendis sapiente alias
-              fugiat odit repudiandae in quis, dolorum quidem nostrum!
+              Welcome to Bun Drop, where we’re revolutionizing the way you enjoy
+              your favorite burgers! Founded on the belief that great food
+              should be fast, fresh, and fun, Bun Drop combines cutting-edge
+              drone technology with culinary excellence to bring you a unique
+              dining experience.
             </p>
           </div>
           <div>
@@ -22,7 +24,7 @@ function Footer() {
               <Link to={"/"}>
                 <li className="home">Home</li>
               </Link>
-              
+
               <li>Menu</li>
             </ul>
           </div>

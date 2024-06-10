@@ -13,6 +13,7 @@ function LoginModal({ setShowLoginModal, setIsLoggedIn }) {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
 
+  // Function to handle user sign-up
   useEffect(() => {
     fetch("http://localhost:3000/users")
       .then((res) => res.json())
@@ -38,11 +39,12 @@ function LoginModal({ setShowLoginModal, setIsLoggedIn }) {
       });
   }
 
+  // Handler for the sign-up form submission
   const handleSignUp = (e) => {
     e.preventDefault();
     signUpUser();
   };
-
+  // Function to handle user sign-up
   const handleLogin = (e) => {
     e.preventDefault();
     const success = logInUser(username, password, users);
@@ -50,7 +52,7 @@ function LoginModal({ setShowLoginModal, setIsLoggedIn }) {
       alert("Login successful!");
       setShowLoginModal(false);
       setIsLoggedIn(true);
-       window.location.reload();
+      window.location.reload();
     } else {
       alert("Invalid username or password");
     }
@@ -65,7 +67,7 @@ function LoginModal({ setShowLoginModal, setIsLoggedIn }) {
         <div className="login-modal-title">
           <h2>{currState}</h2>
           <img
-            onClick={() => setShowLoginModal(false)}
+            onClick={() => setShowLoginModal(false)}//Close the modal when the image is clicked
             src="/small_logo.png"
             alt=""
           />

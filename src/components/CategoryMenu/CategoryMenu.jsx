@@ -3,6 +3,7 @@ import "./CategoryMenu.css";
 function CategoryMenu({ category, setCategory }) {
   const [categories, setCategories] = useState([]);
 
+  //fetch categories from the server
   useEffect(() => {
     fetch("http://localhost:3000/categories")
       .then((res) => res.json())
@@ -12,9 +13,11 @@ function CategoryMenu({ category, setCategory }) {
   return (
     <div className="category-menu">
       <div className="category-list">
+        {/* Map through categories and render a clickable list item for each */}
         {categories.map((c) => (
           <div
             onClick={() =>
+              // if clicked category is already selected, set to "all",
               setCategory((prev) => (prev === c.name ? "all" : c.name))
             }
             key={c.name}

@@ -7,6 +7,7 @@ function Favorites({ menuRefs }) {
   const [user, setUser] = useState(null);
   const { userInfo } = useLocalStorage();
 
+  //fetch user data and their favorites
   useEffect(() => {
     if (userInfo) {
       fetch(`http://localhost:3000/users/${userInfo.id}`)
@@ -17,7 +18,8 @@ function Favorites({ menuRefs }) {
         });
     }
   }, [favorites]);
-  
+
+  // Function to scroll to a specific menu item based on its ID
   const scrollToMenuItem = (id) => {
     const menuItemElement = menuRefs.current[id];
     if (menuItemElement) {
@@ -29,6 +31,7 @@ function Favorites({ menuRefs }) {
     <div className="favorites-container">
       <h1>Favorite Items</h1>
       <div className="favorites-list">
+        {/* Map through favorites and render each favorite item */}
         {favorites.map((favorite) => (
           <div key={favorite.id} className="favorites-list-item">
             <img
