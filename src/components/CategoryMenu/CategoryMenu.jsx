@@ -11,7 +11,7 @@ function CategoryMenu({ category, setCategory }) {
   }, []);
 
   return (
-    <div className="category-menu">
+    <div className="category-menu" id="category-menu">
       <div className="category-list">
         {/* Map through categories and render a clickable list item for each */}
         {categories.map((c) => (

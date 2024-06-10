@@ -87,6 +87,86 @@
       "price": 50,
       "category": "drinks",
       "image": "/OreoMilkshake_img.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Cookie iceceream",
+      "description": "",
+      "price": 70,
+      "category": "dessert",
+      "image": "/cookieIcecream_img.jpg"
+    },
+    {
+      "id": "13",
+      "name": "Coffe mousse",
+      "description": "",
+      "price": 65,
+      "category": "dessert",
+      "image": "/coffe_mouse.jpg"
+    },
+    {
+      "id": "14",
+      "name": "Choko twix",
+      "description": "",
+      "price": 75,
+      "category": "dessert",
+      "image": "/chocoTwix_img.jpg"
+    },
+    {
+      "id": "15",
+      "name": "Bannana chockolate",
+      "description": "",
+      "price": 60,
+      "category": "dessert",
+      "image": "/BananChocolate_img.jpg"
+    },
+    {
+      "id": "16",
+      "name": "Onion Rings",
+      "description": "",
+      "price": 55,
+      "category": "snacks",
+      "image": "/Onion_rings.jpg"
+    },
+    {
+      "id": "17",
+      "name": "Nachos",
+      "description": "",
+      "price": 80,
+      "category": "snacks",
+      "image": "/nachos.jpg"
+    },
+    {
+      "id": "18",
+      "name": "Loaded fries",
+      "description": "",
+      "price": 50,
+      "category": "snacks",
+      "image": "/Loaded_fries.jpg"
+    },
+    {
+      "id": "19",
+      "name": "Garlic dip",
+      "description": "",
+      "price": 20,
+      "category": "sauce",
+      "image": "/Sauce.jpg"
+    },
+    {
+      "id": "20",
+      "name": "BBQ dip",
+      "description": "",
+      "price": 20,
+      "category": "sauce",
+      "image": "/Sauce.jpg"
+    },
+    {
+      "id": "21",
+      "name": "mayonnaise",
+      "description": "",
+      "price": 20,
+      "category": "sauce",
+      "image": "/Sauce.jpg"
     }
   ],
   "categories": [

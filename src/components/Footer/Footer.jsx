@@ -3,7 +3,7 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 function Footer() {
   return (
-    <div className="footer">
+    <div className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-content-top">
           <img src="/Bun_drop_logo.png" alt="" />
@@ -25,7 +25,7 @@ function Footer() {
                 <li className="home">Home</li>
               </Link>
 
-              <li>Menu</li>
+              <a href="#category-menu">Menu</a>
             </ul>
           </div>
           <div>
@@ -38,9 +38,16 @@ function Footer() {
         </div>
         <div className="footer-content-bottom">
           <div className="footer-icons">
-            <img src="/x_img.png" alt="" />
-            <img src="/instagram_img.png" alt="" />
-            <img src="facebook_img.png" alt="" />
+            <a href="https://twitter.com">
+              <img src="/x_img.png" alt="" />
+            </a>
+            <a href="https://www.instagram.com">
+              {" "}
+              <img src="/instagram_img.png" alt="" />
+            </a>
+            <a href="https://www.facebook.com">
+              <img src="facebook_img.png" alt="" />
+            </a>
           </div>
         </div>
       </div>

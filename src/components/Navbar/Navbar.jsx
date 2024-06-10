@@ -11,9 +11,9 @@ function Navbar({ setShowLoginModal, isLoggedIn, setIsLoggedIn }) {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  function toggleMenu  (){
+  function toggleMenu() {
     setIsOpen(!isOpen);
-  };
+  }
 
   const handleLogout = () => {
     logoutUser();
@@ -29,9 +29,9 @@ function Navbar({ setShowLoginModal, isLoggedIn, setIsLoggedIn }) {
             <Link to={"/"}>
               <li className="home">Home</li>
             </Link>
-            <li>About</li>
-            <li>Menu</li>
-            <li>Contact</li>
+            <a href="#footer">About</a>
+            <a href="#category-menu">Menu</a>
+            <a href="#footer">Contact</a>
           </ul>
         </div>
         <div className="logo">
