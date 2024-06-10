@@ -1,6 +1,7 @@
 Blev något konstigt med minna commits till git så lägger upp commitsen i ett nytt project ungefär som jag jobbade med projectet.
 
 json-server --watch db.json
+
 npm run dev
 
 Bun Drop documentation
