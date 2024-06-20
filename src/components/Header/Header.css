@@ -29,6 +29,9 @@
     max-width: 50%;
     margin-top: 100px;
   }
+  .header p {
+    font-size: 12px;
+  }
 }
 @media (max-width: 750px) {
   .header {
@@ -37,5 +40,11 @@
   .header-content {
     max-width: 70%;
     margin-top: 150px;
+  }
+  .header p {
+    font-size: 12px;
+  }
+  .header p {
+    display: none;
   }
 }

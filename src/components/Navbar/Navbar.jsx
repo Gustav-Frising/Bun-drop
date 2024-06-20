@@ -7,13 +7,13 @@ function Navbar({ setShowLoginModal, isLoggedIn, setIsLoggedIn }) {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
-  const { logoutUser } = useLocalStorage();
+  const { logoutUser, userInfo } = useLocalStorage();
 
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  function toggleMenu() {
-    setIsOpen(!isOpen);
-  }
+  // function toggleMenu() {
+  //   setIsOpen(!isOpen);
+  // }
 
   const handleLogout = () => {
     logoutUser();
@@ -38,7 +38,7 @@ function Navbar({ setShowLoginModal, isLoggedIn, setIsLoggedIn }) {
           <img src="/Bun_drop_logo.png" alt="image" />
         </div>
         <div className="navbar-right">
-          {isLoggedIn ? (
+          {isLoggedIn && userInfo ? (
             <button onClick={handleLogout}>Logout</button>
           ) : (
             <button onClick={() => setShowLoginModal(true)}>Login</button>

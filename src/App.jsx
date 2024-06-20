@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home/Home";
@@ -7,10 +7,16 @@ import Ceckout from "./pages/Checkout/Checkout";
 import Footer from "./components/Footer/Footer";
 import LoginModal from "./components/LoginModal/LoginModal";
 import Confirmation from "./pages/Confirmation/Confirmation";
+import useLocalStorage from "./hooks/useLocalStorage";
 
 function App() {
   const [showLoginModal, setShowLoginModal] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("user"));
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { userInfo } = useLocalStorage(); // Retrieve userInfo from useLocalStorage hook
+
+  useEffect(() => {
+    setIsLoggedIn(!!userInfo); // Update isLoggedIn based on userInfo presence
+  }, [userInfo]); // Watch for changes in userInfo to update isLoggedIn
 
   return (
     <>
@@ -32,7 +38,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Ceckout />} />
-          <Route path="/confirmation" element={<Confirmation/>}/>
+          <Route path="/confirmation" element={<Confirmation />} />
         </Routes>
       </div>
       <Footer />

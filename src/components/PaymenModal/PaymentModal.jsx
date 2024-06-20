@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./PaymentModal.css";
 import { useNavigate } from "react-router-dom";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 function PaymentModal({ setShowPaymentModal, handleCheckoutSubmit }) {
+  const { clearCart } = useLocalStorage();
   const [paymentMethod, setPaymentMethod] = useState("Swish"); // Default to Swish
 
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -26,6 +28,7 @@ function PaymentModal({ setShowPaymentModal, handleCheckoutSubmit }) {
         cvv,
       });
       handleCheckoutSubmit(e);
+      clearCart();
       navigate("/confirmation");
     }
   };

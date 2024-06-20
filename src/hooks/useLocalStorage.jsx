@@ -34,7 +34,12 @@ function useLocalStorage() {
     }
   }
   function logoutUser() {
-    localStorage.clear();
+    localStorage.removeItem("user");
+    setUserInfo(null); // Optionally clear userInfo state
+  }
+  function clearCart() {
+    // Clear only the cartItems from localStorage
+    localStorage.removeItem("cartItems");
   }
 
   function addCartItem(itemId) {
@@ -90,6 +95,7 @@ function useLocalStorage() {
     cartItems,
     deleteCartItems,
     userInfo,
+    clearCart,
   };
 }
 
