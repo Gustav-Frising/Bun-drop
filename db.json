@@ -201,49 +201,9 @@
       "id": "1",
       "name": "user",
       "password": "password",
-      "favorites": [
-        {
-          "id": "2",
-          "name": "Cheese & Bacon Burger",
-          "description": "",
-          "price": 90,
-          "category": "hamburgers",
-          "image": "cheeze_bacon_burger.jpg"
-        },
-        {
-          "id": "3",
-          "name": "Chilli Burger",
-          "description": "",
-          "price": 95,
-          "category": "hamburgers",
-          "image": "/Chilli_burger.jpg"
-        },
-        {
-          "id": "1",
-          "name": "Barbeque Burger",
-          "description": "",
-          "price": 85,
-          "category": "hamburgers",
-          "image": "/barbeque_burger.jpg"
-        }
-      ]
+      "favorites": []
     }
   ],
   "orders": [
-    {
-      "id": "d8a6",
-      "firstName": "asd",
-      "lastName": "asd",
-      "email": "asd@mail.com",
-      "address": "asd",
-      "city": "asd",
-      "zipCode": "123123",
-      "phone": "1231231233",
-      "cartItems": {
-        "2": 4,
-        "3": 4
-      },
-      "total": 740
-    }
   ]
 }
