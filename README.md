@@ -1,10 +1,9 @@
-Blev något konstigt med minna commits till git så lägger upp commitsen i ett nytt project ungefär som jag jobbade med projectet.
-
 json-server --watch db.json
 
 npm run dev
 
 Bun Drop documentation
+
 The purpose of this project was to create a dynamic food delivery application suitable for
 both mobile and desktop.
 To achieve this, I started out with structuring up a mobile design in Figma, serving as the
